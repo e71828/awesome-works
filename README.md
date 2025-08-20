@@ -2,6 +2,21 @@
 
 ## 写在前面：
 
+2025年8月20日：`INT` 的有符号发送；
+
+```pascal
+// 方式一
+array_Tx_2A1[7]:=USINT_TO_BYTE(INT_TO_USINT(tracking_control_value MOD 256));
+array_Tx_2A1[8]:=USINT_TO_BYTE(INT_TO_USINT(tracking_control_value / 256));  // 该行有效，INT_TO_USINT。
+array_Tx_2A1[8]:=SINT_TO_BYTE(INT_TO_SINT(tracking_control_value / 256));  // 对比上一行，SINT_TO_BYTE 更容易看出是有符号数。
+```
+
+```pascal
+// 方式二
+array_Tx_29C[1]:=UINT_TO_BYTE(INT_TO_UINT(can_goal_high_value) MOD 256);
+array_Tx_29C[2]:=UINT_TO_BYTE(INT_TO_UINT(can_goal_high_value) / 256);
+```
+
 2025年8月5日：
 
 - 在双 `task` 的 `Plc Logic` 下， `IecTaskGetFirst` 获取顺序由内部id确定，不是命名排序，应该使用 `IecTaskGetCurrent` 。
