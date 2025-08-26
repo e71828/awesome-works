@@ -93,8 +93,8 @@ array_Tx_29C[2]:=UINT_TO_BYTE(INT_TO_UINT(can_goal_high_value) / 256);
   - zat3000e 未开始。
 
 - 新（平移＋防摇摆2.0）搭载车型：
-  - 车型 ztc1300vs863 两台，#8554和 #8552；
-  - 车型 zat4000vs863-1 一台，#2024；
+  - 车型 ztc1300vs863 两台，#8554和 #8552；（无 `autowinch_error`）
+  - 车型 zat4000vs863-1 一台，#2024；（有 `autowinch_error`）
 - 此前（平移＋防摇摆1.0）搭载车型：
   - ZAT2400V863；
   - ZAT2600V853N；
@@ -102,10 +102,10 @@ array_Tx_29C[2]:=UINT_TO_BYTE(INT_TO_UINT(can_goal_high_value) / 256);
   - ZAT3000VS863-1；
   - ZAT4000VS863（停产）。
 - 此前平移搭载车型：
-  - zat6000v863、
-  - zat7000v863，已更新程序待测试；
+  - zat6000v863、（有 `autowinch_error`）
+  - zat7000v863，已更新程序待测试；（无 `autowinch_error`）
 - 衍生车型：
-  - ztc3500vs863 不搭载；zat9000v863 不搭载；
+  - ztc3500vs863 不搭载；zat9000v863 不搭载；（有 `autowinch_error`）
   - zat3000v753g 待测试；
 
 - 完成临时测试车辆（拆物资）：
